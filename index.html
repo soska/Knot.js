@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Title!</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="knot.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		#title{
+			color:#900;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title" contentEditable>The Title!!!</h1>
+	<!-- <input type="text" name="somename" id="somename"> -->
+	<textarea name="somename" rows="8" cols="40" id="somename"></textarea>
+	<input type="text" name="somename" id="color">
+	<script type="text/javascript" charset="utf-8">
+		$('#title').knot('html','site:title:text');
+		$('#title').knot('style:color','site:title:color');
+		$('#somename').knot('syndicate','site:title:text');
+		$('#color').knot('syndicate','site:title:color');
+	</script>
+</body>
+</html>
